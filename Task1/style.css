@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f6f9;
+    color:#222;
+}
+
+/* Navbar */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    transition:.4s;
+
+    z-index:1000;
+}
+
+header.active{
+    background:#111827;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav li{
+    margin-left:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:8px 15px;
+    transition:.3s;
+    border-radius:5px;
+}
+
+nav a:hover{
+
+    background:#00d4ff;
+    color:#111827;
+
+}
+
+#hamburger{
+
+    display:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+
+}
+
+/* Hero */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#141E30,#243B55);
+
+}
+
+.hero h1{
+
+    font-size:60px;
+    color:white;
+
+}
+
+.hero p{
+
+    color:white;
+
+    margin:25px 0;
+
+    font-size:20px;
+
+}
+
+.hero a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#00d4ff;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.hero a:hover{
+
+    background:white;
+    color:#111827;
+
+}
+
+/* Sections */
+
+section{
+
+    padding:120px 8%;
+
+}
+
+h2{
+
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+
+}
+
+.container{
+
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    background:white;
+
+    width:300px;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+#about,
+#contact{
+
+    text-align:center;
+    line-height:1.8;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+nav ul{
+
+display:none;
+
+position:absolute;
+
+top:70px;
+
+right:0;
+
+background:#111827;
+
+width:220px;
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+nav ul.show{
+
+display:flex;
+
+}
+
+nav li{
+
+margin:20px 0;
+
+}
+
+#hamburger{
+
+display:block;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+}
