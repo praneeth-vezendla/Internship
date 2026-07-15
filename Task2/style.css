@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top left, #1e6b72, transparent 30%),
+        radial-gradient(circle at bottom right, #37245f, transparent 35%),
+        #12131f;
+
+    color: white;
+}
+
+.stopwatch-container {
+    width: 500px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    margin-bottom: 35px;
+
+    font-size: 35px;
+
+    letter-spacing: 5px;
+}
+
+.timer {
+    margin-bottom: 35px;
+
+    font-size: 55px;
+    font-weight: bold;
+
+    color: #55e6d0;
+}
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#startBtn {
+    background: #43d9b8;
+    color: #111;
+}
+
+#pauseBtn {
+    background: #ffc857;
+    color: #111;
+}
+
+#lapBtn {
+    background: #547cff;
+    color: white;
+}
+
+#resetBtn {
+    background: #ff4d6d;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.85;
+}
+
+.lap-container {
+    margin-top: 35px;
+}
+
+.lap-container h2 {
+    margin-bottom: 15px;
+}
+
+#lapList {
+    max-height: 180px;
+
+    overflow-y: auto;
+
+    list-style: none;
+}
+
+#lapList li {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 8px 0;
+
+    padding: 12px 18px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+
+    .stopwatch-container {
+        width: 90%;
+
+        padding: 30px 20px;
+    }
+
+    .timer {
+        font-size: 38px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
